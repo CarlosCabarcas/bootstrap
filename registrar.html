@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/registrar.css">
+	<title>Trabajos de grados</title>
+	
+</head>
+<body>
+	<header>
+		<div class="container col-md-offset-2">
+
+			<h1>Trabajos de grado de ingenieria de sistemas</h1>
+		</div>
+		<div class="container col-md-offset-2">
+			<ul class="nav nav-tabs">
+			  <li role="presentation"><a href="index.html">Home</a></li>
+                          <li role="presentation"><a href="listar.php">Listar proyectos</a></li>
+			  <li role="presentation" class="active"><a href="registrar.html">Registrar proyectos</a></li>
+			  <li role="presentation"><a href="#">Eliminar o editar proyectos</a></li>
+			</ul>
+		</div>
+	</header>
+	
+	<div id="contenido" class="container col-md-offset-2">
+		
+		<section class="main row">
+			
+			<article class="col-md-7">
+				<h2> Registrar nuevo proyecto</h2>
+
+				<div id="mostrar"></div>
+
+
+
+			<form role="form" name="miformulario" action="guardar.php" method="post" onsubmit="return validar1()">
+          <div class="form-group">
+            <label for="fornombre">Nombre del Proyecto</label>
+            <input type="text" class="form-control" id="nombre" name="nombre"
+                   placeholder="Introduzca el nombre del proyecto" required>
+          </div>
+          <div class="form-group">
+            <label for="forautor1">Autor1</label>
+            <input type="text" class="form-control" id="autor1" name="autor1"
+                   placeholder="Introduzca el nombre del primer autor" required>
+          </div>
+          <div class="form-group">
+            <label for="forautor2">Autor2</label>
+            <input type="text" class="form-control" id="autor2" name="autor2"
+                   placeholder="Introduzca el nombre del segundo autor">
+          </div>
+          <div class="form-group">
+            <label for="forautor3">Autor3</label>
+            <input type="text" class="form-control" id="autor3" name="autor3"
+                   placeholder="Introduzca el nombre del tercer autor">
+          </div>
+          <div class="form-group">
+            <label for="forasesor">Nombre del Asesor</label>
+            <input type="text" class="form-control" id="asesor" name="asesor"
+                   placeholder="Introduzca el nombre del Asesor" required>
+          </div>
+          <div class="form-group">
+            <label for="fornota">Nota Recibida</label>
+            <input type="text" class="form-control" id="nota" name="nota"
+                   placeholder="Introduzca la nota recibida">
+          </div>
+          <div class="form-group">
+            <label for="forlinea">Linea de Investigacion</label>
+            <input type="text" class="form-control" id="linea" name="linea"
+                   placeholder="Introduzca la linea de investigación" required>
+          </div>
+
+          <button type="submit" id="btn1" class="btn btn-success">Enviar</button>
+        </form>
+
+
+
+			</article>
+			<aside class="col-md-5">
+				<img src="img/unicor.png"><br>
+				<img src="img/logo50.png">
+			</aside>
+
+		</section>
+	
+	</div>
+		
+
+	<footer>
+		<div class="container col-md-offset-2">
+			<cite >	
+				<p id="pie">
+				Copyright © 2000-2016 Interactive Programmers Community - Todos los derechos reservados
+				</p>			
+			</cite>
+			
+		</div>
+	</footer>
+
+	<script type="text/javascript">
+		function validateForm () {
+			 var most =document.getElementById("mostrar");
+			 var nom =document.forms["myForm"] ["nombre"].value;
+			 var aut =document.forms["myForm"] ["autor1"].value;
+			 var ase =document.forms["myForm"] ["asesor"].value;
+			 var com =document.forms["myForm"] ["fecha"].value;
+			 var tip =document.forms["myForm"] ["nota"].value;
+			 var lin =document.forms["myForm"] ["linea"].value;
+			 
+
+		}
+	</script>
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
